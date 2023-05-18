@@ -44,7 +44,7 @@ pytest tests
 curl -X POST http://localhost:6969/user/{user_id}/transactions
 ```
 
-#### Add create report to crontab
+#### Add crontab to create report
 ```
 0 0 * * * curl -X POST "http://0.0.0.0:8000/report?date=$(date +\%Y-\%m-\%d)" 
 ```
