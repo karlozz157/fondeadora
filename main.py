@@ -25,7 +25,7 @@ def seed() -> dict:
     return {"data": "seed executed successful"}
 
 
-@app.get("/transactions/{user_id}")
+@app.get("/user/{user_id}/transactions")
 def get_transactions_by_user_id(user_id: int) -> dict:
     try:
         repository = TransactionSqliteRepository()
