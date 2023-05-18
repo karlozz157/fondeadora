@@ -14,7 +14,11 @@ class Repository(metaclass=abc.ABCMeta):
         pass
 
     @abc.abstractmethod
-    def get_transactions_by_date(self, date: str) -> dict:
+    def get_transactions_by_date(self, date: str) -> list:
+        pass
+
+    @abc.abstractmethod
+    def get_transactions_by_user_id(self, user_id: int) -> list:
         pass
 
     @abc.abstractmethod
@@ -50,6 +54,11 @@ class TransactionSqliteRepository(Repository):
         check_valid_date(date)
         query = 'SELECT * FROM transactions WHERE datetime LIKE ?'
         self.cursor.execute(query, (f'{date}%',))
+        return self.cursor.fetchall()
+
+    def get_transactions_by_user_id(self, user_id: int) -> list:
+        query = 'SELECT * FROM transactions WHERE user_id = ?'
+        self.cursor.execute(query, ("%d" % user_id,))
         return self.cursor.fetchall()
 
     def insert_transactions(self, transactions: list):

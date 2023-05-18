@@ -25,13 +25,22 @@ def seed() -> dict:
     return {"data": "seed executed successful"}
 
 
+@app.get("/transactions/{user_id}")
+def get_transactions_by_user_id(user_id: int) -> dict:
+    try:
+        repository = TransactionSqliteRepository()
+        transactions = repository.get_transactions_by_user_id(user_id)
+    except Exception as e:
+        raise get_http_exception(e)
+    return {"data": transactions}
+
+
 @app.post("/report")
 def create_report(date: str) -> dict:
     try:
         service = ReconciliationService(TransactionApi(), TransactionSqliteRepository())
         report = service.process(date)
     except Exception as e:
-        raise e
         raise get_http_exception(e)
     return {"data": report}
 
