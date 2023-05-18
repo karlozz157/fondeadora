@@ -16,28 +16,9 @@ class TransactionApi:
         response = requests.post(self.api_url, json={'date': date})
 
         if response.status_code != requests.status_codes.codes.OK:
-            pass #raise ResponseInvalidError(response.text)
+            raise ResponseInvalidError(response.text)
 
-        return [
-            {
-                "transaction_id": 9879448771,
-                "user_id": 1002,
-                "transaction_type": "debit",
-                "amount": 96305,
-                "description": "Transaction 2",
-                "datetime": "2023-03-06T18:48:29"
-            },
-            {
-                "transaction_id": 157,
-                "user_id": 157,
-                "transaction_type": "debit",
-                "amount": 157,
-                "description": "Transaction 157",
-                "datetime": "2023-03-06T18:48:29"
-            }
-        ]
-
-        #return response.json()
+        return response.json()
 
     def check_valid_date_range(self, date) -> None:
         api_allow_date_min = os.getenv("API_ALLOW_DATE_MIN")

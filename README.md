@@ -30,6 +30,11 @@ curl -X GET http://localhost:6969/report/{date}
 curl -X POST http://localhost:6969/report?date={date}
 ```
 
+## Tests
+```bash
+pytest tests
+```
+
 ## Plus
 
 #### Get transactions by user_id
