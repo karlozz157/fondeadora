@@ -52,17 +52,17 @@ curl -X POST http://localhost:6969/user/{user_id}/transactions
 
 ## Evidence
 #### Run the seed
-![image](https://github.com/karlozz157/fondeadora/assets/4811721/cbd1616f-e791-42b8-9eec-721e9bc7b1ef)
+![image](https://github.com/karlozz157/fondeadora/assets/4811721/656075aa-1835-4b7c-bc85-112c1fca3843)
 
 #### Get the transactions by date
-![image](https://github.com/karlozz157/fondeadora/assets/4811721/a2849403-f753-4102-8ec0-dee19e6558e7)
+![image](https://github.com/karlozz157/fondeadora/assets/4811721/c3455020-87cb-4d08-b90b-b99792e91b34)
 
 #### Create report (right the endpoit is giving an error but you can run the tests)
-![image](https://github.com/karlozz157/fondeadora/assets/4811721/66c28f5b-12a3-4fbf-ab26-3842368898c1)
+![image](https://github.com/karlozz157/fondeadora/assets/4811721/79dee99f-91ea-4cf9-9baf-f72d338c2789)
 
 #### tests
-![image](https://github.com/karlozz157/fondeadora/assets/4811721/6c84e692-4a21-48f2-a102-cbdfc0e1261e)
+![image](https://github.com/karlozz157/fondeadora/assets/4811721/3f39a179-4319-4f68-8252-bf7e8549fc26)
 
 #### Get the transactions by user_id
-![image](https://github.com/karlozz157/fondeadora/assets/4811721/622e3331-82e5-4d72-b28d-58a2e93b1e9a)
+![image](https://github.com/karlozz157/fondeadora/assets/4811721/8c69f2dc-9a70-45d2-b015-e29fef7f2da7)
 
